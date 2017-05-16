@@ -23,7 +23,7 @@
 *.pdf
 
 ## But explicitly include any files in the img folder
-!img/
+!img/*
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
