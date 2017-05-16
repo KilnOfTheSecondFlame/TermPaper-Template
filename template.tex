@@ -1,0 +1,75 @@
+\documentclass[a4paper]{report}
+
+% Use swiss german letters
+\usepackage[utf8]{inputenc}
+
+% Language: english
+\usepackage[english]{babel}
+
+% Fancy Figures
+\usepackage{graphicx}
+
+% Use Times
+\usepackage{mathptmx}
+
+% Display the Bibliography in the TOC
+\usepackage{tocbibind}
+
+% Better lists
+\usepackage{enumitem}
+
+% Use biblatex
+\usepackage[style=apa,backend=biber,citestyle=authoryear]{biblatex} 
+
+% Define the bibliography file
+\addbibresource{bibliography.bib}
+
+% To let LaTeX handle "
+\usepackage[autostyle, english = british]{csquotes}
+\DeclareLanguageMapping{english}{english-apa}
+
+% Titlepage
+\newcommand*{\titleAP}{\begingroup % Create the command for including the title page in the document
+	\centering
+	\vspace*{\baselineskip} % Whitespace at the top of the page
+	
+	{\Large FirstName LastName}\\[0.167\textheight] % Author name
+	
+	{\Huge\bfseries Title}\\[\baselineskip]
+	
+	%TODO review subtitle
+	{\Large \textit{Subtitle}}\\
+	\today
+	
+	\vspace*{3\baselineskip} % Whitespace at the bottom of the page
+	\endgroup}
+
+% Define the path were images are found
+\graphicspath{{./img/}}
+
+\begin{document}
+
+\titleAP
+
+\newpage
+
+\begin{abstract}
+	Here goes the abstract.
+\end{abstract}
+
+\tableofcontents
+
+\newpage
+
+\chapter{Introduction}
+\label{ch:Intro}
+
+\section{Preamble}
+Introduction for a \LaTeX\ template on GitHub. GitHub is a hosted implementation of the distributed source code versioning system git. \parencite{Git2017}
+A very comprehensive book has been written by \citeauthor{Chacon2016} and is available for free.
+
+\newpage
+
+\printbibliography
+
+\end{document}
