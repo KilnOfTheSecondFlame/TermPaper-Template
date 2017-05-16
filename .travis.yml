@@ -1,11 +1,6 @@
 dist: trusty
 language: tex
 sudo: false
-cache:
-    apt: true
-    
-    directories:
-        - /usr/share/texlive
 
 addons:
     apt: 
