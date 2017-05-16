@@ -1,12 +1,16 @@
 dist: trusty
-
+language: tex
+sudo: false
 cache:
     apt: true
+    
+    directories:
+        - /usr/share/texlive
 
 addons:
     apt: 
         packages:
-          - texlive
+          - texlive-full
           - biber
 script:
   - pdflatex -interaction=nonstopmode -halt-on-error *.tex
